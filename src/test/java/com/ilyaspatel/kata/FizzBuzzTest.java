@@ -9,12 +9,12 @@ public class FizzBuzzTest {
     /*
     * “fizz” if the number is dividable by 3
     * “buzz” if the number is dividable by 5
-    * “fizzbuzz” if the number is dividable by 3 and 5 (15) ?
+    * “fizzbuzz” if the number is dividable by 3 and 5 (15)
     * the same number if no other requirement is fulfilled 
     * */
 
     @Test
-    public void should_ReturnFizz_when_NumberIsDividableByThree() throws Exception {
+    public void should_ReturnFizz_when_NumberIsDividableByThree() {
 
         FizzBuzz sut = new FizzBuzz();
 
@@ -24,7 +24,7 @@ public class FizzBuzzTest {
     }
 
     @Test
-    public void should_ReturnBuzz_when_NumberIsDividableByFive() throws Exception {
+    public void should_ReturnBuzz_when_NumberIsDividableByFive() {
 
         FizzBuzz sut = new FizzBuzz();
 
@@ -33,7 +33,7 @@ public class FizzBuzzTest {
     }
 
     @Test
-    public void should_ReturnFizzBuzz_when_NumberIsDividableByFifteen() throws Exception {
+    public void should_ReturnFizzBuzz_when_NumberIsDividableByFifteen() {
 
         FizzBuzz sut = new FizzBuzz();
 
@@ -43,7 +43,7 @@ public class FizzBuzzTest {
     }
 
     @Test
-    public void should_ReturnOriginalNumber_when_NoFizzBuzzRulesAreMet() throws Exception {
+    public void should_ReturnOriginalNumber_when_NoFizzBuzzRulesAreMet() {
 
         FizzBuzz sut = new FizzBuzz();
 
