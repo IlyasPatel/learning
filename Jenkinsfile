@@ -103,7 +103,6 @@ node {
         }
 
         stage('Build') {
-            sh "./gradle ${gradleDefaultSwitches} clean build ${gradleAdditionalTestTargets} ${gradleAdditionalSwitches} --refresh-dependencies"
             step $class: 'JUnitResultArchiver', testResults: '**/TEST-*.xml'
 
             populateGlobalVariables()
@@ -189,7 +188,7 @@ node {
 
         if (isPublishingBranch() && isResultGoodForPublishing()) {
             stage ('Publish') {
-                sh "./gradle ${gradleDefaultSwitches}"
+                sh "./gradlew ${gradleDefaultSwitches}"
             }
         }
     } catch (hudson.AbortException ae) {
