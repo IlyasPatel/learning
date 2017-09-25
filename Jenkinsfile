@@ -103,8 +103,7 @@ node {
         }
 
         stage('Build') {
-            step $class: 'JUnitResultArchiver', testResults: '**/TEST-*.xml'
-
+            
             populateGlobalVariables()
 
             def buildColor = currentBuild.result == null ? "good" : "warning"
